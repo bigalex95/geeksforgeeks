@@ -3,6 +3,7 @@
 
 int main(int argc, char *argv[])
 {
+    std::cout << "***************************************" << std::endl;
     run_queue();
     std::cout << "***************************************" << std::endl;
     run_insert2queue();
