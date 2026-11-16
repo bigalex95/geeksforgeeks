@@ -1,47 +1,35 @@
-# GeeksforGeeks Tutorials (Personal Learning)
+# geeksforgeeks
 
-This repository contains personal learning projects inspired by topics from the GeeksforGeeks website. Each tutorial lives in its own folder and is built independently, typically with CMake.
+Small C++ practice projects, each following a topic from GeeksforGeeks articles. Personal learning notes, not a maintained project.
 
-> Note: GeeksforGeeks is a registered trademark of its respective owners. This repository contains my own implementations and notes; it does not redistribute GeeksforGeeks paid content. Links to original articles are provided where relevant.
+## What's inside
 
-## Repository Structure
+Each folder is a standalone CMake project (`CMakeLists.txt`, `src/`, `include/`, `build.sh`, `run.sh`, `build_and_run.sh`):
 
-- `C++ STL Tutorial/` — Minimal CMake project demonstrating a C++ "Hello World" as a base for STL examples. See its [README](C++%20STL%20Tutorial/README.md).
+| Folder | Content |
+|---|---|
+| `C++ STL Tutorial/` | Sorting examples (STL sort, bubble, counting sort, k-th largest, min pair difference, duplicate removal) |
+| `Move Semantics in C++/` | Move semantics and element-insertion examples |
+| `Queue in C++ STL/` | `std::queue` examples |
+| `Strings in C++/` | String examples |
+| `C++ ProjectStructureTempalte/` | Empty project skeleton (folder name has a typo, kept as is) |
 
-As more tutorials are added, each will follow a similar layout with its own `README.md` and build scripts.
+## Run
 
-## Prerequisites
+Needs CMake >= 3.10 and a C++ compiler.
 
-- CMake >= 3.10
-- A C++ compiler (GCC/Clang/MSVC). On Linux, GCC 9+ recommended.
-- `zsh` or `bash` for provided scripts.
-
-## Quick Start
-
-Build and run any tutorial that has a `build.sh`:
-
-```zsh
-# Example: C++ STL Tutorial
+```bash
 cd "C++ STL Tutorial"
 ./build.sh
 ./build/bin/Cpp-STL
 ```
 
-If a tutorial uses plain CMake (no script):
+I built and ran `C++ STL Tutorial` this way; the other folders use the same layout.
 
-```zsh
-mkdir -p build && cd build
-cmake -DCMAKE_BUILD_TYPE=Release ..
-cmake --build . -j"$(nproc || echo 4)"
-```
+## Status
 
-## Contributing / Notes
+Learning repo, not maintained. Examples are short and several are skeletons.
 
-- This is a personal learning space. PRs are welcome but may be curated to keep scope focused on study notes and examples.
-- Keep examples small, focused, and runnable.
-- Prefer standard tooling (CMake, `build.sh`) for consistency.
+## Credits
 
-## License
-
-- Code in this repository is released under the MIT License. See [LICENSE](LICENSE).
-- GeeksforGeeks content and trademarks belong to their respective owners; this repo only links to and is inspired by their materials.
+Topics are taken from GeeksforGeeks, whose name and content belong to their owners. The code here is my own implementation; no GeeksforGeeks material is redistributed. Code is MIT-licensed (see `LICENSE`).
